@@ -1,0 +1,114 @@
+.lvlPick {
+  color: #ffffff;
+  font-size: 3vw;
+}
+
+label {
+  font-size: 2em;
+  font-weight: bolder;
+  color: #473335;
+}
+/*
+.lvlPickBox {
+  background-color: #0a9396;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  
+}*/
+
+.levelBtn {
+  color: #ffffff;
+  font-size: 4em;
+  font-weight: bolder;
+  border-radius: 10%;
+  margin-right: 2%;
+  border: 0;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 1em;
+}
+
+.lvlBtnBox {
+  position: relative;
+  background-color: #7b9e89;
+  width: 30%;
+  padding: 0 0 3em 0;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  margin-bottom: 1em;
+}
+
+.homeBtn {
+  position: absolute;
+  top: 13em;
+  left: -1em;
+  border-radius: 50%;
+  padding: 2em 1.8em 2em 1.8em;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #473335;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.homeBtn:hover {
+  background-color: #9b2226;
+  cursor: pointer;
+}
+
+.playBtn {
+  position: absolute;
+  top: 13em;
+  right: -1em;
+  border-radius: 50%;
+  padding: 2em 1.2em 2em 1.2em;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #008000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.playBtn:hover {
+  background-color: #ee9b00;
+  cursor: pointer;
+}
+
+.lb1 {
+  background-color: #8ea604;
+}
+
+.lb1:hover {
+  background-color: #005f73;
+  cursor: pointer;
+}
+
+.lb2 {
+  background-color: #ec9f05;
+}
+
+.lb2:hover {
+  background-color: #0a9396;
+  cursor: pointer;
+}
+.lb3 {
+  background-color: #d76a03;
+}
+
+.lb3:hover {
+  background-color: #81bdc3;
+  cursor: pointer;
+}
+.lb4 {
+  background-color: #c84639;
+  cursor: pointer;
+}
+
+.lb4:hover {
+  background-color: #94d2bd;
+}
