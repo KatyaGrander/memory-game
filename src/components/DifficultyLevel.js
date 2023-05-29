@@ -7,6 +7,7 @@ function DifficultyLevel({ createTargetList, shuffleCards }) {
       <button
         className="levelBtn lb4"
         onClick={() => {
+         
           createTargetList(5);
           shuffleCards();
         }}
@@ -16,6 +17,7 @@ function DifficultyLevel({ createTargetList, shuffleCards }) {
       <button
         className="levelBtn lb3"
         onClick={() => {
+        
           createTargetList(4);
           shuffleCards();
         }}
@@ -25,6 +27,7 @@ function DifficultyLevel({ createTargetList, shuffleCards }) {
       <button
         className="levelBtn lb2"
         onClick={() => {
+        
           createTargetList(3);
           shuffleCards();
         }}
@@ -34,6 +37,7 @@ function DifficultyLevel({ createTargetList, shuffleCards }) {
       <button
         className="levelBtn lb1"
         onClick={() => {
+          
           createTargetList(2);
           shuffleCards();
         }}

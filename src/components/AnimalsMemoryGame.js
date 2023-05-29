@@ -10,23 +10,27 @@ function AnimalsMemoryGame() {
   const [cards, setCards] = useState([]);
   const [targetCards, setTargetCards] = useState([]);
   const [userChoice, setUserChoice] = useState(null);
+  const [curDifficulty, setCurDifficulty] = useState(0);
   const wrongChoiceSound = new Audio("./sounds/failure.mp3");
   const correctChoiceSound = new Audio("./sounds/success.mp3");
+  
 
+  //shuffle cards for the card grid
   const shuffleCards = () => {
-    //shuffle cards for the card grid
     const shuffled = animalCards.sort(() => Math.random() - 0.5);
     setCards(shuffled);
   };
 
+  // shuffle sounds and pick sounds for the target array according to difficulty level
+
   const createTargetList = (difficulty) => {
-    // shuffle sounds and pick first two for the target array
     const target = animalSounds
       .sort(() => Math.random() - Math.random())
       .slice(0, difficulty);
     playTargetCards(target);
 
     setTargetCards(target);
+    setCurDifficulty(difficulty);
   };
 
   const playTargetCards = (target) => {
@@ -63,7 +67,7 @@ function AnimalsMemoryGame() {
       }
 
       if (targetCards.length === 0) {
-        createTargetList();
+        createTargetList(curDifficulty);
         shuffleCards();
       }
     }
@@ -72,8 +76,10 @@ function AnimalsMemoryGame() {
   return (
     <div className="AnimalsMemoryGame">
       <h1>מצאו את החיות המסתתרות לפי הסדר</h1>
-      <DifficultyLevel createTargetList={createTargetList} shuffleCards={shuffleCards}/>
-
+      <DifficultyLevel
+        createTargetList={createTargetList}
+        shuffleCards={shuffleCards}
+      />
 
       <div className="cardGrid">
         {cards.map((card) => (
@@ -89,7 +95,7 @@ function AnimalsMemoryGame() {
 }
 export default AnimalsMemoryGame;
 
-  /* <button
+/* <button
 className="playGameBtn"
 onClick={() => {
   createTargetList();
