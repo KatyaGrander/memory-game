@@ -64,6 +64,7 @@ function AnimalsMemoryGame() {
         targetCards.shift();
       } else {
         wrongChoiceSound.play();
+        playTargetCards(targetCards);
       }
 
       if (targetCards.length === 0) {
