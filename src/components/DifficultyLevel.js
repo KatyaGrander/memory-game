@@ -2,46 +2,24 @@ import React from "react";
 import "./DifficultyLevel.css";
 
 function DifficultyLevel({ createTargetList, shuffleCards }) {
+  
+  const handleClick = (difficulty) => {
+    createTargetList(difficulty);
+    shuffleCards();
+  };
+
   return (
     <div className="LevelSelect">
-      <button
-        className="levelBtn lb4"
-        onClick={() => {
-         
-          createTargetList(5);
-          shuffleCards();
-        }}
-      >
+      <button className="levelBtn lb4" onClick={() => handleClick(5)}>
         4
       </button>
-      <button
-        className="levelBtn lb3"
-        onClick={() => {
-        
-          createTargetList(4);
-          shuffleCards();
-        }}
-      >
+      <button className="levelBtn lb3" onClick={() => handleClick(4)}>
         3
       </button>
-      <button
-        className="levelBtn lb2"
-        onClick={() => {
-        
-          createTargetList(3);
-          shuffleCards();
-        }}
-      >
+      <button className="levelBtn lb2" onClick={() => handleClick(3)}>
         2
       </button>
-      <button
-        className="levelBtn lb1"
-        onClick={() => {
-          
-          createTargetList(2);
-          shuffleCards();
-        }}
-      >
+      <button className="levelBtn lb1" onClick={() => handleClick(2)}>
         1
       </button>
       <label>רמה</label>
@@ -50,11 +28,3 @@ function DifficultyLevel({ createTargetList, shuffleCards }) {
 }
 
 export default DifficultyLevel;
-/*
-        <div>
-          <button className="homeBtn">חזור</button>
-          <button className="playBtn"
-          onClick={}
-          
-          >למשחק</button>
-        </div>*/

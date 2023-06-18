@@ -1,18 +1,21 @@
-import React from "react";
-//import { useState } from "react";
+import React, { useState } from "react";
+
 import "./App.css";
-import AnimalsMemoryGame from "./components/AnimalsMemoryGame";
-import OppositesMemoryGame from "./components/OppositesMemoryGame";
+
+import GamePickButtonGrid from "./components/GamePickButtonGrid";
+import GamePad from "./components/GamePad";
 
 function App() {
+  const [visibleGrid, setVisibleGrid] = useState("true");
+
+  const isButtonGridVisible = () => {
+    setVisibleGrid(!visibleGrid);
+  };
+
   return (
-    <div className="App">
-
-      <OppositesMemoryGame />
-     
-
-      <AnimalsMemoryGame />
-    </div>
-  );
+    visibleGrid ? 
+      <GamePickButtonGrid isButtonGridVisible={isButtonGridVisible} /> :
+      <GamePad isButtonGridVisible={isButtonGridVisible}/>
+    );
 }
 export default App;

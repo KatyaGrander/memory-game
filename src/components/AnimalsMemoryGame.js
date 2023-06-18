@@ -95,13 +95,3 @@ function AnimalsMemoryGame() {
   );
 }
 export default AnimalsMemoryGame;
-
-/* <button
-className="playGameBtn"
-onClick={() => {
-  createTargetList();
-  shuffleCards();
-}}
->
-התחילו במשחק
-</button>*/

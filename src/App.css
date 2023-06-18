@@ -1,15 +1,51 @@
 .App {
   text-align: center;
   font-family: "Noto Sans Hebrew", sans-serif;
+  margin: auto;
+  padding: 2em;
 }
 
 h1 {
   color: #473335;
   font-size: 2vw;
-
-  
-
 }
+
+.gameBtnGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 50%;
+  margin: auto;
+  border-radius: 1em;
+  column-gap: 0.5em;
+  row-gap: 0.35em;
+  padding: 1%;
+}
+
+.selectGameBtn {
+  width: 8em;
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-weight: bolder;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #ffffff;
+  white-space: normal;
+  border-radius: 10%;
+  border: 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right: 2%;
+  margin-bottom: 1em;
+}
+
+.sGBtn4 {
+  background-color: #8ab17d;
+}
+
+.selectGameBtn:hover {
+  cursor: pointer;
+}
+
 /*
 .levelBtn {
   color: #ffffff;
