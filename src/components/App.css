@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+  font-family: "Noto Sans Hebrew", sans-serif;
+  margin: auto;
+  padding: 2em;
+}
+
+h1 {
+  color: #473335;
+  font-size: 2vw;
+}
+
+.gameBtnGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 50%;
+  margin: auto;
+  border-radius: 1em;
+  column-gap: 0.5em;
+  row-gap: 0.35em;
+  padding: 1%;
+}
+
+.selectGameBtn {
+  width: 8em;
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-weight: bolder;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #ffffff;
+  white-space: normal;
+  border-radius: 10%;
+  border: 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right: 2%;
+  margin-bottom: 1em;
+}
+
+.sGBtn4 {
+  background-color: #8ab17d;
+}
+
+.selectGameBtn:hover {
+  cursor: pointer;
+}
+
+/*
+.levelBtn {
+  color: #ffffff;
+  font-size: 4em;
+  font-weight: bolder;
+  
+  border-radius: 10%;
+  margin-right: 2em;
+
+  border: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.difficultyLvl {
+  display: grid;
+  grid-template-columns: 1fr .75fr;
+  grid-row: ;
+  width: 50%;
+  margin: auto;
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+.dot {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot1 {
+  background-color: #8ea604;
+}
+
+.dot2 {
+  background-color: #ec9f05;
+}
+
+.dot3 {
+  background-color: #d76a03;
+}
+
+.dot4 {
+  background-color: #bf3100;
+}
+
+.dotLvl {
+  padding-top: 6em;
+}
+
+.dotLvl1 {
+  margin-left: 8em;
+}
+
+.dotLvl2 {
+  margin-left: 6em;
+}
+
+.dotLvl3 {
+  margin-left: 4em;
+}
+.dotLvl4 {
+  margin-left: 2.5em;
+}
+
+.lb1 {
+  background-color: #005f73;
+}
+
+.lb1:hover {
+  background-color: #ca6702;
+}
+
+.lb2 {
+  background-color: #0a9396;
+}
+
+.lb2:hover {
+  background-color: #bb3e03;
+}
+.lb3 {
+  background-color: #81bdc3;
+}
+
+.lb3:hover {
+  background-color: #ae2012;
+}
+.lb4 {
+  background-color: #94d2bd;
+}
+
+.lb4:hover {
+  background-color: #9b2226;
+}
+*/
