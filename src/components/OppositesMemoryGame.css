@@ -1,0 +1,21 @@
+/*.OppositesMemoryGame {
+    text-align: center;
+    font-family: "Noto Sans Hebrew", sans-serif;
+  }
+  
+  card {
+    padding: 0;
+  }
+  .cardGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #6bb4b1;
+    width: 50%;
+    margin: auto;
+    border-radius: 1em;
+    background-color: #e2af47;
+    column-gap: 0.5em;
+    row-gap: 0.35em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding : 1%;
+  }*/

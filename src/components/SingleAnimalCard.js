@@ -6,7 +6,6 @@ function SingleAnimalCard({ card, handleChoice }) {
 
   const clickHandler = () => {
     handleChoice(card);
-    
   };
 
   return (

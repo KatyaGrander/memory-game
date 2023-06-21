@@ -5,72 +5,50 @@ import { animalCards } from "../data/animalCards";
 import { animalSounds } from "../data/animalSounds";
 import "./AnimalsMemoryGame.css";
 import SingleAnimalCard from "./SingleAnimalCard";
+import { correctChoice, wrongChoice, playTargetCards } from "./Utils";
 
 function AnimalsMemoryGame() {
   const [cards, setCards] = useState([]);
   const [targetCards, setTargetCards] = useState([]);
   const [userChoice, setUserChoice] = useState(null);
   const [curDifficulty, setCurDifficulty] = useState(0);
-  const wrongChoiceSound = new Audio("./sounds/failure.mp3");
-  const correctChoiceSound = new Audio("./sounds/success.mp3");
-  
+  const [counter, setCounter] = useState(0);
 
-  //shuffle cards for the card grid
+  //IMPORTANT -> ADD STATE TO DISABLE BUTTON CLICK UNTILL SOUNDS DONE PLAYING!!!
+
   const shuffleCards = () => {
     const shuffled = animalCards.sort(() => Math.random() - 0.5);
     setCards(shuffled);
   };
-
   // shuffle sounds and pick sounds for the target array according to difficulty level
 
   const createTargetList = (difficulty) => {
     const target = animalSounds
       .sort(() => Math.random() - Math.random())
       .slice(0, difficulty);
-    playTargetCards(target);
 
+    playTargetCards(target);
     setTargetCards(target);
     setCurDifficulty(difficulty);
-  };
-
-  const playTargetCards = (target) => {
-    for (let i = 0; i < target.length; i++) {
-      const audio = new Audio(target[i].src);
-      setTimeout(() => audio.play(), 2000 * i);
-    }
-    clearTimeout();
   };
 
   const handleChoice = (card) => {
     setUserChoice(card);
     console.log(userChoice);
 
-    let targetElement = null;
-
-    //check if sounds array has element with id equal to user's choice
-    const hasElement = targetCards.some((element) => {
-      if (element.id === card.id) {
-        targetElement = element;
-        return true;
-      }
-      return false;
-    });
-
-    //check if hasElement and if it's at index 0 of the sound array.
-    //if so, remove first element of the sounds array
-    if (targetCards.length > 0) {
-      if (hasElement && targetCards.indexOf(targetElement) === 0) {
-        correctChoiceSound.play();
-        targetCards.shift();
+    if (targetCards[counter].id === card.id) {
+      if (counter < curDifficulty - 1) {
+        correctChoice();
+        setCounter(counter + 1);
       } else {
-        wrongChoiceSound.play();
-        playTargetCards(targetCards);
-      }
-
-      if (targetCards.length === 0) {
+        correctChoice();
+        setCounter(0);
         createTargetList(curDifficulty);
         shuffleCards();
       }
+    } else {
+      wrongChoice(targetCards);
+      setCounter(0);
     }
   };
 
