@@ -12,10 +12,10 @@ function App() {
     setVisibleGrid(!visibleGrid);
   };
 
-  return (
-    visibleGrid ? 
-      <GamePickButtonGrid isButtonGridVisible={isButtonGridVisible} /> :
-      <GamePad isButtonGridVisible={isButtonGridVisible}/>
-    );
+  return visibleGrid ? (
+    <GamePickButtonGrid isButtonGridVisible={isButtonGridVisible} />
+  ) : (
+    <GamePad isButtonGridVisible={isButtonGridVisible} />
+  );
 }
 export default App;

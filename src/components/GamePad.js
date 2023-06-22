@@ -3,21 +3,22 @@ import { useState } from "react";
 import AnimalsMemoryGame from "./AnimalsMemoryGame";
 import HomeButton from "./HomeButton";
 
-function GamePad({ isButtonGridVisible }) {
+function GamePad({ isButtonGridVisible, gameName }) {
   const [isVisible, setToVisible] = useState(false);
 
   const makeVisible = () => {
     setToVisible(!isVisible);
     isButtonGridVisible();
-    console.log("hey home");
   };
+
+  const curGameName = gameName;
 
   return (
     <div>
       <div>
         <HomeButton makeVisible={makeVisible} />
       </div>
-
+<p> curGameName : {curGameName}</p>
       <AnimalsMemoryGame />
     </div>
   );

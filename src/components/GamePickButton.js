@@ -1,11 +1,17 @@
 import React from "react";
 
+function GamePickButton({ buttonText, makeVisible, gameName, setGameName }) {
 
-function GamePickButton({ buttonText, makeVisible }) {
   return (
     <div>
       <div>
-        <button className="selectGameBtn sGBtn4" onClick={makeVisible}>
+        <button
+          className="selectGameBtn sGBtn4"
+          onClick={() => {
+           // makeVisible();
+            setGameName(gameName);
+          }}
+        >
           {buttonText}
         </button>
       </div>
@@ -14,4 +20,3 @@ function GamePickButton({ buttonText, makeVisible }) {
 }
 
 export default GamePickButton;
-
