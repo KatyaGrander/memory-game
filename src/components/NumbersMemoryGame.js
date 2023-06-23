@@ -3,14 +3,14 @@ import { useState } from "react";
 import DifficultyLevel from "./DifficultyLevel";
 import { numbersCards } from "../data/numbersCards";
 import { numbersSounds } from "../data/numbersSounds";
-import "./NumbersMemoryGame.css";
-import SingleNumbersCard from "./SingleNumbersCard";
+import "./MemoryGame.css";
+import SingleCard from "./SingleCard";
 import { correctChoice, wrongChoice, playTargetCards } from "./Utils";
 
 function NumbersMemoryGame() {
   const [cards, setCards] = useState([]);
   const [targetCards, setTargetCards] = useState([]);
-  const [userChoice, setUserChoice] = useState(null);
+
   const [curDifficulty, setCurDifficulty] = useState(0);
   const [counter, setCounter] = useState(0);
 
@@ -33,10 +33,7 @@ function NumbersMemoryGame() {
   };
 
   const handleChoice = (card) => {
-    setUserChoice(card);
-    console.log(userChoice);
-
-    if (targetCards[counter].id+1 === card.id) {
+    if (targetCards[counter].id + 1 === card.id) {
       if (counter < curDifficulty - 1) {
         correctChoice();
         setCounter(counter + 1);
@@ -63,11 +60,7 @@ function NumbersMemoryGame() {
 
       <div className="cardGrid">
         {cards.map((card) => (
-          <SingleNumbersCard
-            key={card.id}
-            card={card}
-            handleChoice={handleChoice}
-          />
+          <SingleCard key={card.id} card={card} handleChoice={handleChoice} />
         ))}
       </div>
     </div>

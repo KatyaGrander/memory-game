@@ -1,5 +1,6 @@
 import React from "react";
 import "./SingleAnimalCard.css";
+import "./SingleCard.css"
 
 
 function SingleAnimalCard({ card, handleChoice }) {

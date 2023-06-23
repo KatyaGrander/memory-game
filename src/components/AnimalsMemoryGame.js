@@ -3,14 +3,14 @@ import { useState } from "react";
 import DifficultyLevel from "./DifficultyLevel";
 import { animalCards } from "../data/animalCards";
 import { animalSounds } from "../data/animalSounds";
-import "./AnimalsMemoryGame.css";
+import "./MemoryGame.css";
 import SingleAnimalCard from "./SingleAnimalCard";
 import { correctChoice, wrongChoice, playTargetCards } from "./Utils";
 
 function AnimalsMemoryGame() {
   const [cards, setCards] = useState([]);
   const [targetCards, setTargetCards] = useState([]);
-  const [userChoice, setUserChoice] = useState(null);
+
   const [curDifficulty, setCurDifficulty] = useState(0);
   const [counter, setCounter] = useState(0);
 
@@ -33,9 +33,6 @@ function AnimalsMemoryGame() {
   };
 
   const handleChoice = (card) => {
-    setUserChoice(card);
-    console.log(userChoice);
-
     if (targetCards[counter].id === card.id) {
       if (counter < curDifficulty - 1) {
         correctChoice();
@@ -58,7 +55,7 @@ function AnimalsMemoryGame() {
       <DifficultyLevel
         createTargetList={createTargetList}
         shuffleCards={shuffleCards}
-        gameCards = {animalCards}
+        gameCards={animalCards}
       />
 
       <div className="cardGrid">

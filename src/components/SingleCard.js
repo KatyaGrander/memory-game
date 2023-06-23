@@ -1,8 +1,7 @@
 import React from "react";
 import "./SingleCard.css";
-import SoundButton from "./SoundButton";
 
-function SingleOppositesCard({ card, handleChoice }) {
+function SingleCard({ card, handleChoice }) {
   //returns single card template
 
   const clickHandler = () => {
@@ -11,7 +10,6 @@ function SingleOppositesCard({ card, handleChoice }) {
 
   return (
     <div className="card">
-      <SoundButton card={card} />
       <div>
         <img src={card.src} alt="תוכן הכרטיסיה" onClick={clickHandler} />
       </div>
@@ -19,4 +17,4 @@ function SingleOppositesCard({ card, handleChoice }) {
   );
 }
 
-export default SingleOppositesCard;
+export default SingleCard;

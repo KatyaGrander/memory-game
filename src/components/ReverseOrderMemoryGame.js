@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import DifficultyLevel from "./DifficultyLevel";
-import { oppositesCards } from "../data/oppositesCards";
-import { oppositesSounds } from "../data/oppositesSounds";
+import { reverseOrderCards } from "../data/reverseOrderCards";
+import { reverseOrderSounds } from "../data/reverseOrderSounds";
 import "./MemoryGame.css";
-import SingleOppositesCard from "./SingleOppositesCard";
+import SingleCard from "./SingleCard";
 import { correctChoice, wrongChoice, playTargetCards } from "./Utils";
 
-function OppositesMemoryGame() {
+function ReverseOrderMemoryGame() {
   const [cards, setCards] = useState([]);
   const [targetCards, setTargetCards] = useState([]);
 
@@ -17,18 +17,18 @@ function OppositesMemoryGame() {
   //IMPORTANT -> ADD STATE TO DISABLE BUTTON CLICK UNTILL SOUNDS DONE PLAYING!!!
 
   const shuffleCards = () => {
-    const shuffled = oppositesCards.sort(() => Math.random() - 0.5);
+    const shuffled = reverseOrderCards.sort(() => Math.random() - 0.5);
     setCards(shuffled);
   };
   // shuffle sounds and pick sounds for the target array according to difficulty level
 
   const createTargetList = (difficulty) => {
-    const target = oppositesSounds
+    const target = reverseOrderSounds
       .sort(() => Math.random() - Math.random())
       .slice(0, difficulty);
 
     playTargetCards(target);
-    setTargetCards(target);
+    setTargetCards(target.reverse());
     setCurDifficulty(difficulty);
   };
 
@@ -50,24 +50,20 @@ function OppositesMemoryGame() {
   };
 
   return (
-    <div className="OppositesMemoryGame">
-      <h1>מצאו את ההפכים</h1>
+    <div className="ReverseOrderMemoryGame">
+      <h1>לחצו על הכפתורים בסדר הפוך</h1>
       <DifficultyLevel
         createTargetList={createTargetList}
         shuffleCards={shuffleCards}
-        gameCards={oppositesCards}
+        gameCards={reverseOrderCards}
       />
 
       <div className="cardGrid">
         {cards.map((card) => (
-          <SingleOppositesCard
-            key={card.id}
-            card={card}
-            handleChoice={handleChoice}
-          />
+          <SingleCard key={card.id} card={card} handleChoice={handleChoice} />
         ))}
       </div>
     </div>
   );
 }
-export default OppositesMemoryGame;
+export default ReverseOrderMemoryGame;
