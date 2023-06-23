@@ -58,6 +58,7 @@ function AnimalsMemoryGame() {
       <DifficultyLevel
         createTargetList={createTargetList}
         shuffleCards={shuffleCards}
+        gameCards = {animalCards}
       />
 
       <div className="cardGrid">

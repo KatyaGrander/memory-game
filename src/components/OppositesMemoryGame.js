@@ -5,13 +5,14 @@ import { oppositesCards } from "../data/oppositesCards";
 import { oppositesSounds } from "../data/oppositesSounds";
 import "./OppositesMemoryGame.css";
 import SingleOppositesCard from "./SingleOppositesCard";
-import { playTargetCards } from "./Utils";
+import { correctChoice, wrongChoice, playTargetCards } from "./Utils";
 
 function OppositesMemoryGame() {
   const [cards, setCards] = useState([]);
   const [targetCards, setTargetCards] = useState([]);
   const [userChoice, setUserChoice] = useState(null);
   const [curDifficulty, setCurDifficulty] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   //IMPORTANT -> ADD STATE TO DISABLE BUTTON CLICK UNTILL SOUNDS DONE PLAYING!!!
 
@@ -57,6 +58,7 @@ function OppositesMemoryGame() {
       <DifficultyLevel
         createTargetList={createTargetList}
         shuffleCards={shuffleCards}
+        gameCards={oppositesCards}
       />
 
       <div className="cardGrid">
@@ -71,5 +73,4 @@ function OppositesMemoryGame() {
     </div>
   );
 }
-
 export default OppositesMemoryGame;

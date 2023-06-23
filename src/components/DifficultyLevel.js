@@ -1,10 +1,9 @@
 import React from "react";
 import "./DifficultyLevel.css";
-import { animalCards } from "../data/animalCards";
 
-function DifficultyLevel({ createTargetList, shuffleCards }) {
+function DifficultyLevel({ createTargetList, shuffleCards, gameCards }) {
   const handleClick = (difficulty) => {
-    createTargetList(difficulty, animalCards);
+    createTargetList(difficulty, gameCards);
     shuffleCards();
   };
 

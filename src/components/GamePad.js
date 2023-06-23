@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import AnimalsMemoryGame from "./AnimalsMemoryGame";
 import HomeButton from "./HomeButton";
 
 function GamePad({ isButtonGridVisible, gameName }) {
@@ -11,15 +10,15 @@ function GamePad({ isButtonGridVisible, gameName }) {
     isButtonGridVisible();
   };
 
-  const curGameName = gameName;
+  const CurrentGame = require("./" + gameName).default;
 
   return (
     <div>
       <div>
         <HomeButton makeVisible={makeVisible} />
       </div>
-<p> curGameName : {curGameName}</p>
-      <AnimalsMemoryGame />
+
+      <CurrentGame />
     </div>
   );
 }

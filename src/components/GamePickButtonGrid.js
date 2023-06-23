@@ -3,10 +3,9 @@ import React, { useState } from "react";
 import GamePickButton from "./GamePickButton";
 import { gameNames } from "../data/gameNames";
 
-function GamePickButtonGrid({ isButtonGridVisible }) {
+function GamePickButtonGrid({ isButtonGridVisible, setGameName }) {
   const [isVisible, setToVisible] = useState(false);
-  const [game, setGameName] = useState(null);
-
+  
   const makeVisible = () => {
     setToVisible(!isVisible);
     isButtonGridVisible();
@@ -15,12 +14,12 @@ function GamePickButtonGrid({ isButtonGridVisible }) {
   return (
     <div>
       <div className="App gameBtnGrid">
-        <p> game : {game}</p>
         <GamePickButton
           buttonText={"משחק המספרים"}
           makeVisible={makeVisible}
           gameName={gameNames[0].name}
           setGameName={setGameName}
+          
         ></GamePickButton>
         <GamePickButton
           buttonText={"התאימו חפצים"}

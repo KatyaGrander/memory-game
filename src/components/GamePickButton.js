@@ -8,7 +8,7 @@ function GamePickButton({ buttonText, makeVisible, gameName, setGameName }) {
         <button
           className="selectGameBtn sGBtn4"
           onClick={() => {
-           // makeVisible();
+            makeVisible();
             setGameName(gameName);
           }}
         >
