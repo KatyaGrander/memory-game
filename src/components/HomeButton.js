@@ -5,7 +5,7 @@ function HomeButton({makeVisible}) {
 
   return (
     <>
-      <button className="homeBtn" onClick={makeVisible}>חזור</button>
+      <button className="homeBtn" onClick={makeVisible}></button>
     </>
   );
 }
