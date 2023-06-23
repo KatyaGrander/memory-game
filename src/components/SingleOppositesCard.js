@@ -1,5 +1,6 @@
 import React from "react";
 import "./SingleOppositesCard.css";
+import SoundButton from "./SoundButton";
 
 function SingleOppositesCard({ card, handleChoice }) {
   //returns single card template
@@ -10,6 +11,7 @@ function SingleOppositesCard({ card, handleChoice }) {
 
   return (
     <div className="card">
+       <SoundButton card = {card}/>
       <div>
         <img
           

@@ -43,25 +43,7 @@ label {
   margin-bottom: 1em;
 }
 
-.homeBtn {
-  position: absolute;
-  top: 13em;
-  left: -1em;
-  border-radius: 50%;
-  padding: 2em 1.8em 2em 1.8em;
-  border: 0;
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #473335;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  cursor: pointer;
-}
 
-
-.homeBtn:hover {
-  background-color: #9b2226;
-  cursor: pointer;
-}
 
 .playBtn {
   position: absolute;
@@ -75,6 +57,7 @@ label {
   background-color: #008000;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 .playBtn:hover {
   background-color: #ee9b00;

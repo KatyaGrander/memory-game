@@ -1,21 +1,19 @@
 import React from "react";
+import "./GamePickButton.css"
 
 function GamePickButton({ buttonText, makeVisible, gameName, setGameName }) {
-
   return (
-    <div>
-      <div>
-        <button
-          className="selectGameBtn sGBtn4"
-          onClick={() => {
-            makeVisible();
-            setGameName(gameName);
-          }}
-        >
-          {buttonText}
-        </button>
-      </div>
-    </div>
+    <>
+      <button
+        className="selectGameBtn sGBtn4"
+        onClick={() => {
+          makeVisible();
+          setGameName(gameName);
+        }}
+      >
+        {buttonText}
+      </button>
+    </>
   );
 }
 

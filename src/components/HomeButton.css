@@ -1,0 +1,23 @@
+.homeBtn:hover {
+  background-color: #9b2226;
+  cursor: pointer;
+}
+
+.homeBtn {
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 13em;
+  margin-left: 10em;
+  padding: 3em 2.8em 3em 2.8em;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #126782;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: url("/img/homeButton.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}

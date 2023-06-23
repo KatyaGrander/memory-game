@@ -1,5 +1,6 @@
 import React from "react";
 import "./SingleAnimalCard.css";
+import SoundButton from "./SoundButton";
 
 function SingleAnimalCard({ card, handleChoice }) {
   //returns single card template
@@ -10,6 +11,7 @@ function SingleAnimalCard({ card, handleChoice }) {
 
   return (
     <div className="card">
+     
       <div>
         <img
           className="frontCard"

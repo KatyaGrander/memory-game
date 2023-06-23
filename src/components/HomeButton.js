@@ -1,12 +1,12 @@
 import React from "react";
-
+import "./HomeButton.css"
 
 function HomeButton({makeVisible}) {
 
   return (
-    <div>
+    <>
       <button className="homeBtn" onClick={makeVisible}>חזור</button>
-    </div>
+    </>
   );
 }
 

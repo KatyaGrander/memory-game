@@ -12,7 +12,7 @@ function GamePickButtonGrid({ isButtonGridVisible, setGameName }) {
   };
 
   return (
-    <div>
+    <>
       <div className="App gameBtnGrid">
         <GamePickButton
           buttonText={"משחק המספרים"}
@@ -58,7 +58,7 @@ function GamePickButtonGrid({ isButtonGridVisible, setGameName }) {
           setGameName={setGameName}
         ></GamePickButton>
       </div>
-    </div>
+    </>
   );
 }
 
