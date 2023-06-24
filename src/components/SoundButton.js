@@ -14,7 +14,7 @@ function SoundButton({ card }) {
 
   return (
     <>
-      <button className="soundButton" onClick={playSound}></button>
+      <button className="soundButton" onClick={playSound}><img src="/img/soundIcon.jpeg" alt="השמיע קול" /></button>
     </>
   );
 }
